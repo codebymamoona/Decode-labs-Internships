@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trailhead — Find your next trail</title>
+  <meta name="description" content="Trailhead helps you discover, plan, and log hiking trails near you.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== HEADER & NAV (landmark: branding + wayfinding) ===== -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="#" class="logo" aria-label="Trailhead home">
+        <span class="logo-mark" aria-hidden="true">▲</span> Trailhead
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Toggle navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="primary-nav" id="primaryNav" aria-label="Primary">
+        <ul>
+          <li><a href="#trails">Trails</a></li>
+          <li><a href="#planner">Planner</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#" class="btn btn-primary">Sign in</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== MAIN (core narrative) ===== -->
+  <main id="main-content">
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-text">
+        <p class="eyebrow">Outdoor · Adventure · Planning</p>
+        <h1>Find the trail<br>that finds <em>you</em>.</h1>
+        <p class="hero-sub">
+          Trailhead maps thousands of routes by difficulty, distance, and
+          elevation — so you spend less time scrolling and more time hiking.
+        </p>
+        <div class="hero-actions">
+          <a href="#trails" class="btn btn-primary">Browse trails</a>
+          <a href="#planner" class="btn btn-secondary">Plan a route</a>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="hero-card">
+          <div class="hero-card-row"><span>Elevation gain</span><strong>412 m</strong></div>
+          <div class="hero-card-row"><span>Distance</span><strong>8.2 km</strong></div>
+          <div class="hero-card-row"><span>Difficulty</span><strong>Moderate</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Content grid: trail cards -->
+    <section class="content-grid" id="trails" aria-labelledby="trails-heading">
+      <h2 id="trails-heading">Popular this week</h2>
+
+      <div class="card-grid">
+        <article class="card">
+          <h3>Ridgeline Loop</h3>
+          <p class="card-meta">6.1 km · Easy</p>
+          <p>A gentle loop through pine forest with a lookout point halfway.</p>
+          <button class="btn btn-outline save-btn" data-trail="Ridgeline Loop">Save trail</button>
+        </article>
+
+        <article class="card">
+          <h3>Copper Ridge Trail</h3>
+          <p class="card-meta">14.3 km · Hard</p>
+          <p>A demanding day hike with steep switchbacks and river crossings.</p>
+          <button class="btn btn-outline save-btn" data-trail="Copper Ridge Trail">Save trail</button>
+        </article>
+
+        <article class="card">
+          <h3>Willow Creek Path</h3>
+          <p class="card-meta">3.4 km · Easy</p>
+          <p>Flat, shaded, and stroller-friendly — great for a short evening walk.</p>
+          <button class="btn btn-outline save-btn" data-trail="Willow Creek Path">Save trail</button>
+        </article>
+
+        <article class="card">
+          <h3>Summit Pass</h3>
+          <p class="card-meta">10.7 km · Moderate</p>
+          <p>Reward: a 360° summit view. Best attempted early morning.</p>
+          <button class="btn btn-outline save-btn" data-trail="Summit Pass">Save trail</button>
+        </article>
+      </div>
+    </section>
+
+    <!-- Sidebar + main content example (Grid macro layout) -->
+    <section class="planner" id="planner" aria-labelledby="planner-heading">
+      <div class="planner-main">
+        <h2 id="planner-heading">Plan your next route</h2>
+        <p>
+          Tell us how much time you've got and how far you want to push, and
+          we'll shortlist trails that fit. Saved trails appear in the panel
+          on the side.
+        </p>
+        <form class="planner-form" id="plannerForm">
+          <label for="duration">Time available (hours)</label>
+          <input type="number" id="duration" name="duration" min="1" max="12" value="3">
+
+          <label for="difficulty">Preferred difficulty</label>
+          <select id="difficulty" name="difficulty">
+            <option>Easy</option>
+            <option>Moderate</option>
+            <option>Hard</option>
+          </select>
+
+          <button type="submit" class="btn btn-primary">Suggest a trail</button>
+        </form>
+        <p class="planner-result" id="plannerResult" role="status" aria-live="polite"></p>
+      </div>
+
+      <aside class="planner-sidebar" aria-labelledby="saved-heading">
+        <h2 id="saved-heading">Saved trails</h2>
+        <ul class="saved-list" id="savedList">
+          <li class="saved-empty">No trails saved yet.</li>
+        </ul>
+      </aside>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER (terminal metadata) ===== -->
+  <footer class="site-footer" id="about">
+    <div class="footer-inner">
+      <p>&copy; 2026 Trailhead. Built as a DecodeLabs Full Stack internship project.</p>
+      <ul class="footer-links">
+        <li><a href="#">Privacy</a></li>
+        <li><a href="#">Terms</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
