@@ -1,4 +1,4 @@
-<img width="2720" height="2920" alt="responsive_wireframe_breakpoints" src="https://github.com/user-attachments/assets/54f1e42c-0eee-4bdf-b2ce-a3e8688a8b70" /># Trailhead — Responsive Frontend Interface
+ /># Trailhead — Responsive Frontend Interface
 
 **Project 1 — Full Stack Development Internship (DecodeLabs)**
 
